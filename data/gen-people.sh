@@ -1,7 +1,12 @@
 #!/bin/bash
 
+#if [ "$#" != "2" ]; then
+#       echo "Usage: $0 <outputfile> <size>"
+#       exit 1
+#fi
+
 # Output file
-outputFile="$1"
+outputFile="${1:-./data/people.json}"
 size=${2:-2048}
 SEED=12345
 RANDOM=$SEED
