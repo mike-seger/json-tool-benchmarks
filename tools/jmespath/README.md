@@ -1,0 +1,3 @@
+- https://jmespath.org/examples.html
+- https://jmespath.org/tutorial.html
+- https://mixedanalytics.com/knowledge-base/filter-specific-fields-values/

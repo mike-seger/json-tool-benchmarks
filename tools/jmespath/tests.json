@@ -1,13 +1,13 @@
 [
-    {"name": "select_attr", "expression": "people[?lastName=='Jones']|[-1:].{f: firstName, l: lastName}"},
-    {"name": "sort_by", "expression": "people[?lastName=='Smith']|sort_by(@, &age)[-1:].{f: firstName, l: lastName}"},
-    {"name": "sort", "expression": "people|[].age|sort(@)[-1:]"},
-    {"name": "min", "expression": "people|[].salary|min(@)"},
-    {"name": "min_by", "expression": "people|min_by(@, &salary)"},
-    {"name": "max", "expression": "people|[].salary|max(@)"},
-    {"name": "max_by", "expression": "people|max_by(@, &salary)"},
-    {"name": "contains", "expression": "people[?contains(lastName, 'e')]|length(@)"},
-    {"name": "sum", "expression": "people|[].salary|sum(@)"},
-    {"name": "avg", "expression": "people|[].salary|floor(avg(@))"},
-    {"name": "reverse", "expression": "people|reverse(@)|[-1:].[firstName, lastName]"}
+    {"name": "select_attr", "expression": "people[?lastName=='Jones']|[-1:].{f: firstName, l: lastName}", "n": 10},
+    {"name": "sort_by", "expression": "people[?lastName=='Smith']|sort_by(@, &age)[-1:].{f: firstName, l: lastName}", "n": 10},
+    {"name": "sort", "expression": "people|[].age|sort(@)[-1:]", "n": 10},
+    {"name": "min", "expression": "people|[].salary|min(@)", "n": 10},
+    {"name": "min_by", "expression": "people|min_by(@, &salary)", "n": 10},
+    {"name": "max", "expression": "people|[].salary|max(@)", "n": 10},
+    {"name": "max_by", "expression": "people|max_by(@, &salary)", "n": 10},
+    {"name": "contains", "expression": "people[?contains(lastName, 'e')]|length(@)", "n": 10},
+    {"name": "sum", "expression": "people|[].salary|sum(@)", "n": 10},
+    {"name": "avg", "expression": "people|[].salary|floor(avg(@))", "n": 10},
+    {"name": "reverse", "expression": "people|reverse(@)|[-1:].[firstName, lastName]", "n": 10}
 ]

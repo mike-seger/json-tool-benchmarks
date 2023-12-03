@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.net128.app.jmespath'
+version '0.6.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.burt:jmespath-jackson:0.6.0'
+}
+
+application {
+    mainClassName = 'com.net128.app.jmespath.JmespathCli'
+}
+
