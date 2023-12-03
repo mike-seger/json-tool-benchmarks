@@ -1,0 +1,6 @@
+[
+    {"name": "select_attr", "expression": "people[?lastName=='Smith'].age"},
+    {"name": "sort_by", "expression": "people[?lastName=='Smith']|sort_by(@, &age)[].age"},
+    {"name": "#sort", "expression": "people|sort(@)[].age"},
+    {"name": "reverse", "expression": "people|reverse(@)|length(@)"}
+]
