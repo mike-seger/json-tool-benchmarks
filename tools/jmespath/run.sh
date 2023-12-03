@@ -7,13 +7,8 @@ while read line; do
 	expression="${line%%$'\t'*}"
 	name="${line##*$'\t'}"
 	[[ "expression" == "$expression" || "$name" == \#* ]] && continue 
-	echo "$name: cat data/people.json | jp '$expression'"
-	cat data/people.json | jp "$expression"
+	echo "$name"
+#	echo "$name: cat data/people.json | jp '$expression'"
+	cat data/people.json | jp "$expression" | tr -d " \n" 2>/dev/null | cut -b 1-200
+	echo
 done
-
-exit 0
-
-cat data/people.json | jp "people[?lastName=='Smith'].age"
-cat data/people.json | jp "people[?lastName=='Smith']|sort_by(@, &age)[].age"
-cat data/people.json | jp "people|reverse(@)|length(@)"
-

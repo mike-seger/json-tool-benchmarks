@@ -1,6 +1,13 @@
 [
-    {"name": "select_attr", "expression": "people[?lastName=='Smith'].age"},
-    {"name": "sort_by", "expression": "people[?lastName=='Smith']|sort_by(@, &age)[].age"},
-    {"name": "#sort", "expression": "people|sort(@)[].age"},
-    {"name": "reverse", "expression": "people|reverse(@)|length(@)"}
+    {"name": "select_attr", "expression": "people[?lastName=='Jones']|[-1:].{f: firstName, l: lastName}"},
+    {"name": "sort_by", "expression": "people[?lastName=='Smith']|sort_by(@, &age)[-1:].{f: firstName, l: lastName}"},
+    {"name": "sort", "expression": "people|[].age|sort(@)[-1:]"},
+    {"name": "min", "expression": "people|[].salary|min(@)"},
+    {"name": "min_by", "expression": "people|min_by(@, &salary)"},
+    {"name": "max", "expression": "people|[].salary|max(@)"},
+    {"name": "max_by", "expression": "people|max_by(@, &salary)"},
+    {"name": "contains", "expression": "people[?contains(lastName, 'e')]|length(@)"},
+    {"name": "sum", "expression": "people|[].salary|sum(@)"},
+    {"name": "avg", "expression": "people|[].salary|floor(avg(@))"},
+    {"name": "reverse", "expression": "people|reverse(@)|[-1:].[firstName, lastName]"}
 ]
