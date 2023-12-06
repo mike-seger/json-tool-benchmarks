@@ -7,7 +7,7 @@ normal=$(tput sgr0)
 #file=bench.json
 #[ "$1" != "" ] && file=$1 
 
-(printf "Benchmark\tn\tjmes-java\tjmes-go\tjmespath-rust\n"
+(printf "Benchmark\tn\tjmes-java\tjmes-go\tjmes-rust\tjmes-js\n"
 cat | jq -rs '.[] | "|`\(.name)`|\(.n)|" + ([.time[] | min |
 	(.*1000|round)? // "N/A"] | min as $total_min | map(if . ==
 	$total_min then "**\(.)**" else "\(.)" end) | join("|"))' | \

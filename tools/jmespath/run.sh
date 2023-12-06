@@ -1,14 +1,10 @@
 #!/bin/bash
-##!/usr/bin/env bash
 
-#set -x 
 timecommand=$(which gtime)
 [ -x "$timecommand" ] || timecommand=/usr/bin/time
 TIME='timeout 10 '$timecommand' -f %U'
 
-
-#echo -n '{"name": "'$b'", "n": '$n', "time": {'
-tools=( "jmes-java" "jmes-go", "jmes-rust" )
+tools=( "jmes-java" "jmes-go" "jmes-rust" "jmes-js" )
 tool=jp
 
 cat tools/jmespath/tests.json |jq -r '
@@ -23,25 +19,18 @@ while read line; do
 	echo "$name ($n) -> $expression" >&2
 
 	i=1
-#	echo -n '"'$tool'": ['
-		echo -n "{\"name\": \"$name\", \"n\": $n, \"time\": {"
+	echo -n "{\"name\": \"$name\", \"n\": $n, \"time\": {"
 	first=1
 	for tool in "${tools[@]}"; do
 		[ $first -ne 1 ] && echo -n ', '
 		first=0
 		echo -n "\"$tool\": ["
-	#	echo "$name: cat data/people.json | jp '$expression'"
-	#	echo "cat data/people.json | timeout 10 $timecommand -f %U "$tool" \"$expression\" $n" >&2
 
 		if [ "$tool" == "jp" ] ; then		
 			t=$(cat data/people.json | timeout 10 $timecommand -f %U $tool "$expression" $n 2>&1 > /dev/null)
 		else 
 			t=$(cat data/people.json | bin/$tool "$expression" $n | tail -1)
 		fi
-#		[ $? != 0 ] && break # error from call
-#		[ -z "$t" ] && break # terminate on timeout
-		#cat data/people.json | jp "$expression" | tr -d " \n" 2>/dev/null | cut -b 1-200
-	#	echo "Time: $t"
 		echo -n $t
 		
 		echo -n ']'
