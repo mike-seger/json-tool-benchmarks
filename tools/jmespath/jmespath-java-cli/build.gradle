@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id "io.github.goooler.shadow" version "8.1.2"
 }
 
 group 'com.net128.app.jmespath'
@@ -18,3 +19,9 @@ application {
     mainClassName = 'com.net128.app.jmespath.JmespathCli'
 }
 
+// Configure the shadowJar task
+shadowJar {
+    archiveBaseName.set('JmespathCli')
+    archiveVersion.set('1.0.0')
+    archiveClassifier.set('')
+}

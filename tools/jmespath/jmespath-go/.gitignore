@@ -1,0 +1,59 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+/bin/
+/pkg/
+
+# Test binary, build with "go test -c"
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the "/" at the start to include vendored packages)
+/vendor/
+
+# IntelliJ IDEA
+.idea/
+
+# VSCode
+.vscode/
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+Desktop.ini
+
+# Editor files
+*.swp
+*.swo
+
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.obj
+
+# Folders to ignore
+tmp
+temp
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# Generated files by JetBrains IDEs
+*.iml
+
+# Generated files by Visual Studio Code
+*.code-workspace
+
+# Other
+*.log
+*.sql
+*.sqlite

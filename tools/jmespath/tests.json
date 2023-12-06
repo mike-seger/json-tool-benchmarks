@@ -1,5 +1,5 @@
 [
-    {"name": "select_attr", "expression": "people[?lastName=='Jones']|[-1:].{f: firstName, l: lastName}", "n": 10},
+    {"name": "select_attr", "expression": "people[?lastName=='Jones']|[-1:].{f: firstName, l: lastName}", "n": 100},
     {"name": "sort_by", "expression": "people[?lastName=='Smith']|sort_by(@, &age)[-1:].{f: firstName, l: lastName}", "n": 10},
     {"name": "sort", "expression": "people|[].age|sort(@)[-1:]", "n": 10},
     {"name": "min", "expression": "people|[].salary|min(@)", "n": 10},
