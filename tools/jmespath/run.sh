@@ -4,7 +4,7 @@ timecommand=$(which gtime)
 [ -x "$timecommand" ] || timecommand=/usr/bin/time
 TIME='timeout 10 '$timecommand' -f %U'
 
-tools=( "jmes-java" "jmes-go" "jmes-rust" "jmes-js" )
+tools=( "jp-java" "jp-graal" "jp-go" "jp-rust" "jp-js" )
 tool=jp
 
 cat tools/jmespath/tests.json |jq -r '

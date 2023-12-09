@@ -1,5 +1,5 @@
 
 # Build
 ```
-go build -o jmespathcli
+go build -o jp-go
 ```

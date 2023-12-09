@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'application'
     id "io.github.goooler.shadow" version "8.1.2"
+    id 'org.graalvm.buildtools.native' version '0.9.28'
 }
 
 group 'com.net128.app.jmespath'
@@ -24,4 +25,15 @@ shadowJar {
     archiveBaseName.set('JmespathCli')
     archiveVersion.set('1.0.0')
     archiveClassifier.set('')
+}
+
+/*nativeImage {
+    mainClassName = 'com.net128.app.jmespath.JmespathCli'
+}*/
+
+graalvmNative {
+    binaries.all {
+        resources.autodetect()
+    }
+    toolchainDetection = false
 }
