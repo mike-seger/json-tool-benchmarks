@@ -7,5 +7,5 @@ brew install jmespath/jmespath/jp
 ```
 
 ```
-./tools/jmespath/run.sh 2>/dev/null | tee /tmp/1 && cat /tmp/1 | tools/format.sh
+./tools/jmespath/run.sh 2>/dev/null | tee /tmp/1 && cat /tmp/1 | tools/format.sh ; rm /tmp/1
 ```
