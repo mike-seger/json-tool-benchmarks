@@ -41,7 +41,6 @@ brew install jmespath/jmespath/jp
 | indices |         100000 |       587 |        189 |    $${\color{green}175}$$ |      1327 |    1236 |
 | literal |         100000 |        36 |         $${\color{green}4}$$ |      63 |       936 |    1319 |
 | multiselect |     100000 |       467 |       $${\color{green}236}$$ |     291 |      1003 |    1217 |
-| pipe |            100000 |        $${\color{green}0}$$ |         $${\color{green}0}$$ |      $${\color{green}0}$$ |        $${\color{green}0}$$ |      $${\color{green}0}$$ |
 | slice |           100000 |       873 |       $${\color{green}456}$$ |    1279 |      3034 |    3224 |
 | syntax |          100000 |       191 |        $${\color{green}61}$$ |     143 |       456 |    1375 |
 | wildcard |        100000 |      1734 |       $${\color{green}981}$$ |    1194 |      5641 |    5348 |
