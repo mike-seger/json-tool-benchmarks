@@ -30,7 +30,6 @@ brew install jmespath/jmespath/jp
  | indices |         100000 |       531 |        193 |      173 * |    1326 |   1234 |             
  | literal |         100000 |        30 |           2 * |        62 |     934 |   1328 |             
  | multiselect |     100000 |       397 |         237 * |       292 |    1006 |   1219 |             
- | pipe |            100000 |          0 * |        0 * |        0 * |      0 * |   0 * | 
  | slice |           100000 |       795 |         453 * |      1294 |    3070 |   3267 |             
  | syntax |          100000 |       177 |          60 * |       137 |     431 |   1315 |             
  | wildcard |        100000 |      1468 |         975 * |      1192 |    5582 |   5323 |  
@@ -55,5 +54,5 @@ brew install jmespath/jmespath/jp
 - https://jmespath.org/
 - https://jmespath.org/libraries.html
 - https://github.com/jmespath/jmespath.test
-- [Compliance Test Results](compliance-tests.tsv)
-- [Large Input Results](large-input.tsv)
+- [Compliance Test Results](compliance-test-results.tsv)
+- [Large Input Test Results](large-input-test-results.tsv)
