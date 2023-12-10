@@ -1,5 +1,8 @@
+# Compare JSON tool performance
 
-# Install JP
+Currently several JMES implementation are compared.
+
+## Install JP
 
 ```
 sudo apt install jp
@@ -7,16 +10,16 @@ or
 brew install jmespath/jmespath/jp
 ```
 
-# Run Benchmarks
+## Run Benchmarks
 
 ```
 ./tools/jmespath/run.sh 2>/dev/null | tee /tmp/1 && cat /tmp/1 | tools/format.sh ; rm /tmp/1
 ./tools/jmespath/run-compliance.sh 2>/dev/null | tee /tmp/1 && cat /tmp/1 | tools/format.sh ; rm /tmp/1
 ```
 
-# Benchmark Results
+## Benchmark Results
 
-## Large Input
+### Large Input
 | Benchmark |        n |   jp-java |   jp-graal |   jp-go |   jp-rust |   jp-js |
 |--------------|------:|----------:|-----------:|--------:|----------:|--------:|
 | select_attr |    100 |      1152 |        533 |$${\color[RGB]{121,189,66}    422 }$$|      9391 |     586 |
@@ -33,7 +36,7 @@ brew install jmespath/jmespath/jp
 
 
 
-## Compliance Tests
+### Compliance Tests
 | Benchmark |            n |   jp-java |   jp-graal |   jp-go |   jp-rust |   jp-js |
 |--------------|----------:|----------:|-----------:|--------:|----------:|--------:|
 | boolean |        1000000 |        88 |$${\color[RGB]{121,189,66}        26 }$$|      66 |       549 |     767 |
