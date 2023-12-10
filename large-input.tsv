@@ -1,12 +1,12 @@
-Benchmark    n    jp-java  jp-graal  jp-go  jp-rust  jp-js
-select_attr  100  860      552       423 *  9515     579
-sort_by      10   104      59        45 *   940      83
-sort         10   392      370       256    1075     189 *
-min          10   258      142       55 *   915      69
-min_by       10   166      69        18 *   916      32
-max          10   258      143       58 *   913      70
-max_by       10   172      70        18 *   904      31
-contains     10   178      149       122 *  981      150
-sum          10   245      126       58 *   904      71
-avg          10   253      124       53 *   922      71
-reverse      10   36       15        2 *    801      2 *
+Benchmark	n	jp-java	jp-graal	jp-go	jp-rust	jp-js
+select_attr	100	860	552	423 *	9515	579
+sort_by	10	104	59	45 *	940	83
+sort	10	392	370	256	1075	189 *
+min	10	258	142	55 *	915	69
+min_by	10	166	69	18 *	916	32
+max	10	258	143	58 *	913	70
+max_by	10	172	70	18 *	904	31
+contains	10	178	149	122 *	981	150
+sum	10	245	126	58 *	904	71
+avg	10	253	124	53 *	922	71
+reverse	10	36	15	2 *	801	2 *
