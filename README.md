@@ -51,3 +51,9 @@ brew install jmespath/jmespath/jp
 | syntax |          100000 |       191 |$${\color[RGB]{121,189,66}        61 }$$|     143 |       456 |    1375 |
 | wildcard |        100000 |      1734 |$${\color[RGB]{121,189,66}       981 }$$|    1194 |      5641 |    5348 |
 
+
+## Links
+
+- https://jmespath.org/
+- https://jmespath.org/libraries.html
+- https://github.com/jmespath/jmespath.test
